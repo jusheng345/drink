@@ -8,5 +8,11 @@ from .models import *
 class Main(ListView):
     model = Shop
 
-# class Name(DetailView):
-#     model = Option
+class Name(DetailView):
+    model = Shop
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        options = Option.objects.filter(shop_id=self.kwargs['pk'])
+        context['options'] = options
+        return context

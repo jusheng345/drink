@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>選擇店家</h1>
+<ul>
+    {% for shop in shop_list %}
+
+    <li> <a href="{{shop.id}}/">{{ shop.shopname }}</a> </li>
+      
+    {% endfor %}
+</ul>
+  
+{% endblock content %}
