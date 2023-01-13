@@ -5,3 +5,8 @@ from .models import *
 # Create your views here.
 
 #主畫面
+class Main(ListView):
+    model = Shop
+
+# class Name(DetailView):
+#     model = Option
