@@ -2,11 +2,18 @@
 
 {% block content %}
 
-<h1>選擇店家</h1>
+<h1>飲料店家列表</h1>
+<a href="create/">我要開一家新店！</a>
 <ul>
     {% for shop in shop_list %}
 
-    <li> <a href="{{shop.id}}/">{{ shop.shopname }}</a> </li>
+    <li>
+        <a href="{{shop.id}}/">{{ shop.shopname }}</a>
+        __|
+        <a href="{{shop.id}}/update/">修改</a>
+        <a href="{{shop.id}}/delete/">刪除</a>
+
+    </li>
       
     {% endfor %}
 </ul>

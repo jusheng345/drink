@@ -22,3 +22,14 @@ class ShopCreate(CreateView):
     fields = ['shopname']
     success_url = '/main/'
     template_name = 'general_form.html'
+
+class ShopUpdate(UpdateView):
+    model = Shop
+    fields = ['shopname']
+    success_url = '/main/'
+    template_name = 'update_shop.html'
+
+class ShopDelete(DeleteView):
+    model = Shop
+    success_url = '/main/'
+    template_name = "confirm_delete.html"
