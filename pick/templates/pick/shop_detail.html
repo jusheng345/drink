@@ -6,8 +6,14 @@
 <ul>
     {% for option in options %}
 
-    <li> {{ option.drinkname }} </li>
-      
+    <li>
+        {{ option.drinkname }}
+        <!-- <a href="/option/{{ option.id }}/">{{ option.drinkname }} </a> -->
+        <a href="/option/{{ option.id }}/update/">修改</a>|
+        <a href="/option/{{ option.id }}/delete/">刪除</a>
+
+    </li>
+     
     {% endfor %}
 </ul>
   

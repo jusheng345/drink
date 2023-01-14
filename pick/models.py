@@ -13,7 +13,7 @@ class Option(models.Model):
     #屬於哪一家店
     shop_id = models.IntegerField()
     #選項文字
-    drinkname = models.CharField(max_length=50)
+    drinkname = models.CharField(max_length=50, verbose_name='飲料名稱')
     #被訂購數
     count = models.IntegerField(default=0)
 
