@@ -16,3 +16,9 @@ class Name(DetailView):
         options = Option.objects.filter(shop_id=self.kwargs['pk'])
         context['options'] = options
         return context
+
+class ShopCreate(CreateView):
+    model = Shop
+    fields = ['shopname']
+    success_url = '/main/'
+    template_name = 'general_form.html'

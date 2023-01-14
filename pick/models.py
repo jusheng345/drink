@@ -4,7 +4,7 @@ from django.db import models
 
 class Shop(models.Model):
     #店家名稱
-    shopname = models.CharField(max_length=50)
+    shopname = models.CharField(max_length=50, verbose_name='店名')
 
     def __str__(self):
         return str(self.id) + ")" + self.shopname
