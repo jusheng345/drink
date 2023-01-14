@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+
+    {% if user.is_authenticated %}
+        哈囉！{{ user.username }} <a href="{% url 'logout' %}">登出</a>
+    {% else %}
+        <a href="{% url 'login' %}">登入</a>
+    {% endif %}
     
 <div id="main-content">
 {% block content %}

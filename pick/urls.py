@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from django.views.generic import RedirectView
 
@@ -13,5 +13,6 @@ urlpatterns = [
     path('option/<int:pk>/create/',views.OptionCreate.as_view()),
     path('option/<int:pk>/update/',views.OptionUpdate.as_view()),
     path('option/<int:pk>/delete/',views.OptionDelete.as_view()),
+    path('accounts/',include('django.contrib.auth.urls')),
 
 ]
