@@ -8,10 +8,9 @@
     {% for shop in shop_list %}
 
     <li>
-        <a href="{{shop.id}}/">{{ shop.shopname }}</a>
-        __|
+        <p><a href="{{shop.id}}/">{{ shop }}</a>
         <a href="{{shop.id}}/update/">修改</a>
-        <a href="{{shop.id}}/delete/">刪除</a>
+        <a href="{{shop.id}}/delete/">刪除</a></p>
 
     </li>
       

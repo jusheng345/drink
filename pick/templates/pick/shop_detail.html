@@ -2,17 +2,17 @@
 
 {% block content %}
 
-<h1>{{ shopname }}</h1>
+<h1>{{  object.shopname }}</h1>
 <a href="/main/">回首頁</a>
 
 <h2>飲料品項</h2>
-
+<a href="/option/{{ object.id }}/create/">新增一項商品</a>
 <ul>
     {% for option in options %}
 
     <li>
         {{ option.drinkname }} |
-        <!-- <a href="/option/{{ option.id }}/">{{ option.drinkname }} </a> -->
+        
         <a href="/option/{{ option.id }}/update/">修改</a>
         <a href="/option/{{ option.id }}/delete/">刪除</a>
 

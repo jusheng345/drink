@@ -7,7 +7,7 @@ class Shop(models.Model):
     shopname = models.CharField(max_length=50, verbose_name='店名')
 
     def __str__(self):
-        return str(self.id) + ")" + self.shopname
+        return self.shopname
     
 class Option(models.Model):
     #屬於哪一家店

@@ -33,7 +33,7 @@ class ShopUpdate(UpdateView):
 class ShopDelete(DeleteView):
     model = Shop
     success_url = '/main/'
-    template_name = "confirm_delete.html"
+    template_name = "shop_delete.html"
 
 class OptionCreate(CreateView):
     model = Option
@@ -59,7 +59,7 @@ class OptionUpdate(UpdateView):
 
 class OptionDelete(DeleteView):
     model = Option
-    template_name = "confirm_delete.html"
+    template_name = "drink_delete.html"
 
     def get_success_url(self):
-        return reverse('shop_view', kwargs={'pk': self.get_object.shop_id})
+        return reverse('shop_view', kwargs={'pk': self.object.shop_id})

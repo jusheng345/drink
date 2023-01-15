@@ -2,13 +2,14 @@
 
 {% block content %}
 
-<h1>刪除店家</h1>
+<h1>刪除品項</h1>
 
 <form action="" method="post">
 
-    <p>確定要刪除【 {{ object.shopname }} 】這間飲料店嗎？</p>
+    <p>確定要刪除【 {{ object.drinkname }} 】這項商品嗎？</p>
     {% csrf_token %}
     <input type="submit" value="沒錯，我真的想好了！">
+    <a href="/main/">沒，我點到</a>
 
 </form>
   
