@@ -2,19 +2,22 @@
 
 {% block content %}
 
-<h1>{{  object.shopname }}</h1>
-<a href="/main/">回首頁</a>
+<h1 class="p-3 mb-2 bg-info-subtle text-emphasis-info">{{  object.shopname }}</h1>
+<a href="/main/" class="btn btn-success" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">回首頁</a>
 
 <h2>飲料品項</h2>
-<a href="/option/{{ object.id }}/create/">新增一項商品</a>
-<ul>
+<a href="/option/{{ object.id }}/create/"
+class="btn btn-info" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">新增一項商品</a>
+<ul class="list-group">
     {% for option in options %}
 
-    <li>
+    <li class="list-group-item">
         {{ option.drinkname }} |
         
-        <a href="/option/{{ option.id }}/update/">修改</a>
-        <a href="/option/{{ option.id }}/delete/">刪除</a>
+        <a href="/option/{{ option.id }}/update/" class="btn btn-outline-warning"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">修改</a>
+        <a href="/option/{{ option.id }}/delete/" class="btn btn-outline-danger"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">刪除</a>
 
     </li>
      

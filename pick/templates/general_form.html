@@ -3,14 +3,24 @@
 {% block content %}
 <form action="" method="post">
     {% csrf_token %}
-    <table>
 
-        {{ form.as_table }}
-
-    </table>
-
-    <input type="submit" value="送出">
+    <div class="card" style="width: 50%; margin: auto;">
+        <img src="https://aics.advantech.com/uploads/eaa6b23f-5d21-4987-8e61-b48da14f9be5-%E9%96%8B%E5%BA%97%E6%B5%81%E7%A8%8B%E6%9C%89%E5%93%AA%E4%BA%9B.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">
+            <table>
+            {{ form.as_table }}
+            </table>
+        </h5>
+          <p class="card-text">開店是件難事，但在這裡，你可以把它變簡單！</p>
+          <input type="submit" class="btn btn-success" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" value="送出">
+          <a href="/main/" class="btn btn-outline-warning"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; margin-left:62%;"
+            >等等，我再想一下</a>
+        </div>
+      </div>
 
 </form>
+
   
 {% endblock content %}

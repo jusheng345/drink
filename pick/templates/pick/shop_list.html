@@ -2,15 +2,23 @@
 
 {% block content %}
 
-<h1>飲料店家列表</h1>
-<a href="create/">我要開一家新店！</a>
-<ul>
+<h1 class="p-3 mb-2 bg-info-subtle text-emphasis-info">飲料店家列表</h1>
+<h4><a href="create/" class="btn btn-primary"Primary>我要開一家新店！</a></h4>
+<ul class="list-group">
     {% for shop in shop_list %}
 
-    <li>
-        <p><a href="{{shop.id}}/">{{ shop }}</a>
-        <a href="{{shop.id}}/update/">修改</a>
-        <a href="{{shop.id}}/delete/">刪除</a></p>
+    <li class="list-group-item">
+        <p> 
+        <a href="{{shop.id}}/" class="btn btn-light"Light>{{ shop }}</a>
+
+        <a href="{{shop.id}}/update/" class="btn btn-outline-warning"
+            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">修改
+        </a>
+
+        <a href="{{shop.id}}/delete/" class="btn btn-outline-danger"
+            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">刪除
+        </a>
+    </p>
 
     </li>
       

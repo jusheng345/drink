@@ -1,14 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-  
-    <form action="" method="post">
+
+<div class="card" style="width: 50%; margin: auto;">
+    <div class="card-body">
+      <h5 class="card-title">歡迎登入！</h5>
+      <h6 class="card-subtitle mb-2 text-muted">登入以享受各種功能！</h6>
+      <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p}}
         <div>
             <input type="submit" value="登入">
         </div>
-    </form>
-
+      </form>
+      <a href="/main/" class="card-link">或著點我回首頁</a>
+    </div>
+</div>
 
 {% endblock content %}

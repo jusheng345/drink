@@ -28,7 +28,7 @@ class ShopUpdate(UpdateView):
     model = Shop
     fields = ['shopname']
     success_url = '/main/'
-    template_name = 'update_shop.html'
+    template_name = 'general_form.html'
 
 class ShopDelete(DeleteView):
     model = Shop
